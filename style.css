@@ -76,6 +76,45 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    letter-spacing: 0.5px;
     background: linear-gradient( to right, #8e2de2, #4a00e0);
+    letter-spacing: 0.5px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer .social-field {
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.4rem;
+}
+
+.footer .social-field a i {
+    margin: 0 0 0.5rem;
+    width: 15px; /* Delimitamos uma largura para os ícones, para alinhar os textos desse campo*/ 
+}
+
+.footer .social-field a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-field.twitter {
+    background: linear-gradient( to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook {
+    background: linear-gradient( to right, #1e3c72, #2a5298);
 }
