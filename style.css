@@ -23,7 +23,7 @@ main.container {
     border-radius: 8px;
     box-shadow: 5px 5px 15px rgba(161, 136, 136, 0.2);
     max-width: 350px;
-    min-height: 60vh;
+    min-height: 40vh;
     padding: 2rem;
 }
 
@@ -47,6 +47,37 @@ main h2::before {
 form {
     display: flex;
     flex-direction: column;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem; /* aplica a property somente no input de username*/ 
+}
+
+.input-field .underline::before {
+    background: rgba(0, 0, 0, 0.2);
+    bottom: -5px;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.input-field .underline::after {
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    bottom: -5px;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0); /* Irá manter na posiçao 0, ou seja escondido*/
+    transition: all .3s ease-in-out;
+    transform-origin: left; /* Faz com que a transição começe pela esquerda*/
+    width: 100%;
+}
+
+.input-field input:focus ~ .underline::after { /* Irá fazer com que o colorido seja atribuído somente quando o input estiver focado, mudando a posição do 0 para 1, ou seja, desescondendo*/
+    transform: scaleX(1);
 }
 
 .input-field {
