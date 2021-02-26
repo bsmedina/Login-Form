@@ -43,3 +43,39 @@ main h2::before {
     width: 25px;
     position: absolute;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+    background: linear-gradient( to left, #8e2de2, #4a00e0);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient( to right, #8e2de2, #4a00e0);
+}
